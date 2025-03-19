@@ -2,8 +2,6 @@
 
 Desenvolver um aplicativo de dicionário que permite buscar definições de palavras em inglês, com pronúncia e exemplos
 
-# Descrição e requisitos
-
 ## Duração
 
 24 horas (aproximadamente)

@@ -12,7 +12,7 @@ const Index = () => {
   const { data, error, isLoading, searchWord } = useDictionaryApi();
 
   return (
-    <main className="min-h-screen w-full flex justify-center sm:py-[3.75rem] sm:px-10  p-6">
+    <main className="min-h-screen w-full flex justify-center sm:py-[3.75rem] sm:px-10 p-6">
       <div className="app-container flex flex-col gap-5">
         <header className="flex justify-between items-center h-9">
           <Book className="w-8 h-9 text-agile-gray-500" />
