@@ -9,14 +9,12 @@ Desenvolver um aplicativo de dicionário que permite buscar definições de pala
 ## Os usuários devem ser capazes de:
 
 - Pesquisar palavras usando o campo de entrada
-- Ver a resposta da Free Dictionary API (https://dictionaryapi.dev/) para a
-- palavra pesquisada
+- Ver a resposta da Free Dictionary API (https://dictionaryapi.dev/) para a palavra pesquisada
 - Ver uma mensagem de validação ao tentar enviar um formulário em branco
 - Reproduzir o arquivo de áudio de uma palavra quando disponível
 - Alternar entre fontes serifadas, sem serifa e monoespaçadas
 - Alternar entre temas claro e escuro
-- Visualizar o layout ideal para a interface dependendo do tamanho da tela do
-- dispositivo
+- Visualizar o layout ideal para a interface dependendo do tamanho da tela do dispositivo
 - Ver estados de hover e foco para todos os elementos interativos
 
 ## Observações:
