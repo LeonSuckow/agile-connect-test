@@ -7,6 +7,7 @@ export function useDictionaryApi() {
   const [data, setData] = useState<DictionaryEntry | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<boolean>(false);
+  const [hasSearched, setHasSearched] = useState(false);
 
   const searchWord = async (word: string) => {
     const wordToSearch = word.trim();
@@ -18,7 +19,7 @@ export function useDictionaryApi() {
     setIsLoading(true);
     setData(null);
     setError(false);
-
+    setHasSearched(true);
     try {
       const response = await dictionaryAPI.get(wordToSearch);
 
@@ -58,5 +59,5 @@ export function useDictionaryApi() {
     }
   };
 
-  return { data, isLoading, error, searchWord };
+  return { data, isLoading, error, searchWord, hasSearched };
 }

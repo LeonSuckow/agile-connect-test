@@ -4,12 +4,14 @@ import { FontSelector } from "@/pages/components/font-selector";
 import { SearchText } from "@/pages/components/search-text";
 import { ThemeSelector } from "@/pages/components/theme-selector";
 import { Book } from "iconoir-react";
+import { EmptyResult } from "./components/empty-result";
 import { ErrorResult } from "./components/error-result";
 import { LoadingResult } from "./components/loading-result";
 import { SearchResult } from "./components/search-result";
 
 const Index = () => {
-  const { data, error, isLoading, searchWord } = useDictionaryApi();
+  const { data, error, isLoading, searchWord, hasSearched } =
+    useDictionaryApi();
 
   return (
     <main className="min-h-screen w-full flex justify-center sm:py-[3.75rem] sm:px-10 p-6">
@@ -23,10 +25,16 @@ const Index = () => {
           </div>
         </header>
         <SearchText searchWord={searchWord} />
-        {data && <SearchResult data={data} />}
-        {isLoading && <LoadingResult />}
-        {error && <ErrorResult />}
-        <div></div>
+
+        {isLoading ? (
+          <LoadingResult />
+        ) : error ? (
+          <ErrorResult />
+        ) : data ? (
+          <SearchResult data={data} />
+        ) : !hasSearched ? (
+          <EmptyResult />
+        ) : null}
       </div>
     </main>
   );
